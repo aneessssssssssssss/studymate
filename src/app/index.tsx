@@ -1,29 +1,23 @@
-
-const courses = [
-{
-id: '1',
-name: 'Pemrograman Mobile',
-lecturer: 'Pak Budi',
-room: 'Lab Informatika',
-day: 'Senin',
-time: '08:00 - 10:00',
-},
-{
-id: '2',
-name: 'Basis Data',
-lecturer: 'Bu Sinta',
-room: 'Ruang 203',
-day: 'Selasa',
-time: '10:00 - 12:00',
-},
-{
-id: '3',
-name: 'Kecerdasan Buatan',
-lecturer: 'Pak Andi',
-room: 'Ruang 301',
-day: 'Rabu',
-time: '13:00 - 15:00',
-},
+const materials = [
+  {
+    id: "1",
+    title: "React Native Dasar",
+    course: "Pemrograman Mobile",
+    studied: true,
+  },
+  {
+    id: "2",
+    title: "Database Normalization",
+    course: "Basis Data",
+    studied: false,
+  },
+  {
+    id: "3",
+    title: "Introduction to AI",
+    course: "Kecerdasan Buatan",
+    studied: false,
+  },
 ];
 
-const countCourses = (data) => data.length;
+const countStudiedMaterials = (data) =>
+  data.filter((item) => item.studied).length;
